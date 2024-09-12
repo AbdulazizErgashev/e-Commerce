@@ -62,7 +62,7 @@ export default function Products() {
     ],
   };
 
-  const tovar = [
+  const products = [
     {
       id: 1,
       title: "Product 1",
@@ -126,24 +126,24 @@ export default function Products() {
   };
 
   return (
-    <div className="h-screen w-full px-10 py-5 relative bg-gray-100">
-      <h2 className="text-center text-2xl font-bold mb-5 text-gray-800">
+    <div className="min-h-screen w-full px-4 md:px-10 py-5 bg-gray-100">
+      <h2 className="text-center text-2xl md:text-3xl font-bold mb-5 text-gray-800">
         Products Carousel
       </h2>
       <Slider {...settings} className="mt-5">
-        {tovar.map((item) => (
-          <div key={item.id} className="p-4">
+        {products.map((item) => (
+          <div key={item.id} className="p-2 md:p-4">
             <div
-              className="bg-white rounded-lg shadow-md p-4 cursor-pointer"
+              className="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:shadow-lg transition-shadow"
               onClick={() => handleProductClick(item.id)}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-auto object-contain"
+                className="w-full h-40 md:h-60 object-contain"
               />
               <div className="mt-4">
-                <h3 className="text-lg font-bold text-gray-800">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800">
                   {item.title}
                 </h3>
                 <p className="text-gray-600">Price: ${item.price.toFixed(2)}</p>

@@ -10,8 +10,23 @@ import ProductDetails from "./pages/ProductDetails";
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
+  const addToCart = (newItem) => {
+    setCartItems((prevCartItems) => {
+      const existingItem = prevCartItems.find(
+        (item) =>
+          item.id === newItem.id && item.selectedColor === newItem.selectedColor
+      );
+
+      if (existingItem) {
+        return prevCartItems.map((item) =>
+          item.id === newItem.id && item.selectedColor === newItem.selectedColor
+            ? { ...item, quantity: item.quantity + newItem.quantity }
+            : item
+        );
+      } else {
+        return [...prevCartItems, newItem];
+      }
+    });
   };
 
   return (

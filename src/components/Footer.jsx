@@ -85,28 +85,25 @@ export default function Footer() {
           href="https://www.instagram.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:text-gray-300 transition-all"
         >
-          <PiInstagramLogoFill
-            size={28}
-            className="hover:text-gray-300 transition-all"
-          />
+          <PiInstagramLogoFill size={28} />
         </a>
         <a
           href="https://www.youtube.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:text-gray-300 transition-all"
         >
-          <FaYoutube size={28} className="hover:text-gray-300 transition-all" />
+          <FaYoutube size={28} />
         </a>
         <a
           href="https://www.facebook.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="hover:text-gray-300 transition-all"
         >
-          <AiFillFacebook
-            size={28}
-            className="hover:text-gray-300 transition-all"
-          />
+          <AiFillFacebook size={28} />
         </a>
       </div>
     </div>

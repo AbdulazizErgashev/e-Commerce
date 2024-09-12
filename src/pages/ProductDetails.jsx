@@ -101,18 +101,18 @@ export default function ProductDetails({ addToCart }) {
   };
 
   return (
-    <div className="h-screen w-full px-10 py-10 bg-gray-100">
-      <div className="flex bg-white rounded-lg shadow-md overflow-hidden">
+    <div className="h-full w-full px-4 md:px-10 py-10 bg-gray-100">
+      <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md overflow-hidden">
         <img
           src={product.image}
           alt={product.title}
-          className="w-1/2 h-auto object-cover"
+          className="w-full md:w-1/2 h-64 md:h-auto object-cover"
         />
-        <div className="w-1/2 p-6">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+        <div className="w-full md:w-1/2 p-6 flex flex-col">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
             {product.title}
           </h2>
-          <p className="text-xl text-gray-600 mb-4">
+          <p className="text-lg md:text-xl text-gray-600 mb-4">
             Price: ${product.price.toFixed(2)}
           </p>
           <div className="mb-4">
